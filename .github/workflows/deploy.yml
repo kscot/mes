@@ -15,7 +15,7 @@ jobs:
   build:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    environment: build
+    #environment: build
     outputs:
       build_id: ${{ steps.passing.outputs.build_id }}
     steps:
@@ -49,7 +49,7 @@ jobs:
     if:  ${{ success() }}
     needs: build
     runs-on: ubuntu-latest
-    environment: deploy
+    #environment: deploy
     steps:
       - name: clone repo
         run: |
