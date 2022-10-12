@@ -42,7 +42,7 @@ jobs:
         id: passing
         if: ${{ success() && steps.prearing.conclusion == 'success' }}
         run: |
-          sleep 400
+          sleep 300
           echo "::set-output name=build_id::$BUILD_ID"
   
   deploy: 
